@@ -1,0 +1,57 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jumpman.GameController">
+   <center>
+      <Canvas fx:id="canvas" height="480.0" width="650.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox prefHeight="134.0" prefWidth="731.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="102.0" prefWidth="262.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#gameOver" text="Game Over">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#highScores" text="High Score">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#saveScores" text="Save Score">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#loadScores" text="Load Score" />
+               </children>
+            </VBox>
+            <Button fx:id="startGameButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onStartGameButtonPressed" prefHeight="26.0" prefWidth="150.0" text="Start Game">
+               <HBox.margin>
+                  <Insets left="50.0" top="60.0" />
+               </HBox.margin>
+            </Button>
+            <TextField fx:id="playerNameField" alignment="CENTER" prefHeight="26.0" prefWidth="133.0" promptText="Player ">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <ListView fx:id="scoreList" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets right="100.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
